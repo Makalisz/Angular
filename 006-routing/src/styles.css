@@ -1,0 +1,38 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+    text-align: center;
+}
+
+nav a{
+    margin: 4px;
+    text-decoration: none;
+    display: inline-block;
+    background: #EEEEEE;
+    padding: 8px;
+    border-radius: 8px;
+    color: #607080; 
+}
+
+nav a.active{
+    color: #F0F0F0;
+    background: crimson;
+}
+
+nav a:hover{
+    background: #F0F0F0;
+    color: crimson;
+}
+
+h2{
+    background: #607080;
+    color: white;
+    padding: 4px;
+}
+
+em{
+    font-style: normal;
+    letter-spacing: 2px;
+}

@@ -1,0 +1,11 @@
+    <h2>Students Menager</h2>
+    Imię: {{ name | uppercase }} <br>
+    Wiek: {{ age }} <br>
+    Czy jest studentem: {{ isStudent ? 'tak' : 'nie'}} <br>
+    Średnia ocen: {{ averageGrade }} <br>
+    Pełnoletni: {{ isAdult() ? 'tak' : 'nie'}} <br>
+    Nagroda: {{ getPrize() }} <br>
+    Egzamin: {{ examDate | date:'y-MM-dd'}} <br>
+
+    <button (click)="increaseAge()">Wiek + 1</button>
+    <button (click)="decreaseAge()">Wiek - 1</button>

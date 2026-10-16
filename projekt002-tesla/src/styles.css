@@ -1,0 +1,56 @@
+section {
+    width: 600px;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    transition: 0.5s;
+    font-family: Arial;
+}
+
+.dzien {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.noc {
+    background-color: #222;
+    color: white;
+}
+
+
+.silnikOn {
+    box-shadow:
+        0 0 20px #2196f3,
+        0 0 40px #2196f3,
+        0 0 70px #2196f3;
+}
+
+
+img {
+    width: 300px;
+    height: 300px;
+
+}
+
+
+.przyciski {
+    text-align: center;
+}
+
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

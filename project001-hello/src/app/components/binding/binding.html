@@ -1,0 +1,65 @@
+ <h1>Binding</h1>
+ <img [src]="image">
+ <br>
+ <button (click)="image = 'images/szczur.jpg'">Szczur</button>
+ <button (click)="image = 'images/pudzian.jpg'">pudzian</button>
+ <button (click)="image = 'images/pasikonik.jpg'">Pasikonik</button>
+
+ <h3>Blokowanie elemantów</h3>
+ <textarea [disabled]="lock"></textarea>
+ <br>
+ <button (click)="lock = !lock">
+    @if (lock) {
+        🔒Zablokowane
+    }
+    @else {
+        🔓odblokowane
+    }
+ </button>
+
+ <h3>Binding stylów</h3>
+ <p [style.color]="color">PRZYKŁADOWY NAPIS</p>
+ <button (click)="color='black'">Czarny</button>
+ <button (click)="color='cornflowerblue'">Niebieski</button>
+ <button (click)="color='crimson'">Czerwony</button>
+
+ <h3>Binding Klas</h3>
+ <p [class.error]="ram >= 32">
+    RAM: {{ram}} GB
+    @if(ram >= 32) {Chwilowo niedostępne}
+ </p>   
+ <button (click)="ramMinus()">RAM-</button>
+ <button (click)="ramPlus()">RAM+</button>
+
+ <h3>Switch</h3>
+ <select [(ngModel)]="category">
+    <option value="nothing">Wybierz kategorię</option>
+    <option value="travel">Podróże</option>
+    <option value="food">Jedzenie</option>
+    <option value="clothing">Ubrania</option>
+    <option value="payments">Opłaty</option>
+ </select>
+ <br>
+
+ @switch (category) {
+    @case ('nothing') {
+        <div class="badge" style="background: lightsteelblue;"> WYBIERZ </div>
+    }
+    @case ('travel') {
+        <div class="badge" style="background: skyblue;"> PODRÓŻE </div>
+    }
+    @case ('food') {
+        <div class="badge" style="background: burlywood;"> JEDZENIE </div>
+    }
+    @case ('clothing') {
+        <div class="badge" style="background: mediumaquamarine;"> UBRANIA </div>
+    }
+    @case ('payments    ') {
+        <div class="badge" style="background: salmon;"> OPŁATY </div>
+    }
+    @case ('nothing') {
+        <div class="badge" style="background: lightsteelblue;"> WYBIERZ </div>
+    }
+ }
+
+

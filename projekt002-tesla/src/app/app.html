@@ -1,0 +1,22 @@
+<section 
+  [class.noc]="tryb == 'Noc'"
+  [class.dzien]="tryb == 'Dzień'"
+  [class.silnikOn]="silnikBool">
+  
+
+  <h1>TESLA SIMULATOR</h1>
+  <img src="images/images.png">
+  <br><br>
+  Silnik: {{ silnik }} <br><br>
+  Prędkość: {{ predkosc }} km/h<br><br>
+  Temperatura: {{ temperatura }} °C {{symbol}}<br><br>
+  Bateria: {{ bateria }} %<br><br>
+
+  <button (click)="zgasSilnik()"> {{silnikBtn}} </button>
+  <button (click)="gaz()" [disabled]="silnikBool == false || bateria <= 1">Gaz!</button>
+  <button (click)="hamuj()" [disabled]="predkosc <= 0">Hamuj</button>
+  <button (click)="laduj()" [disabled]="bateria >= 100">Ładuj</button><br>
+  <button (click)="trybSwitch()">Tryb: {{tryb}} </button>
+  <button (click)="plus()">+</button>
+  <button (click)="minus()">-</button>
+</section>

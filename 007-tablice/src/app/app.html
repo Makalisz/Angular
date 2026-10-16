@@ -1,0 +1,64 @@
+<div>
+  <h1>Arrays and Objects</h1>
+
+  <h2>Imiona</h2>
+  <ul>
+    @for (name of names; track $index) {
+      <li>{{ name }}</li>
+    }
+  </ul>
+
+  <ul>
+    @for (name of names; track $index) {
+      <li>
+        {{ $index + 1 }}. {{ name }}
+        @if ($index === indexFound) {
+          ⬅️
+        }
+      </li>
+    }
+  </ul>
+
+  <input type="text" [(ngModel)]="newName">
+  <button (click)="add()">Dodaj</button>
+  <br>
+
+  <input type="number" [(ngModel)]="indexToDelete" placeholder="Numer pozycji (1..)">
+  <button (click)="removeByIndex()">Usuń według indeksu</button>
+  <br>
+
+  <button (click)="removeLast()">Usuń ostatniego</button>
+  <button (click)="sort()">Sortuj</button>
+  <button (click)="reverse()">Odwróć kolejność</button>
+  <br>
+
+  <input type="text" [(ngModel)]="searchedName">
+  <button (click)="find()">Szukaj</button>
+  <br>
+
+  <h2>Filtr</h2>
+  <input
+    type="text"
+    [(ngModel)]="filteredName"
+    placeholder="Szukaj..."
+    (input)="filter()"
+  >
+  <ul>
+    @for (name of namesToDisplay; track $index) {
+      <li>{{ name }}</li>
+    }
+  </ul>
+
+  <h2>Top 3</h2>
+  Top 1 {{ bikeTripsToDisplay[0] }} km<br>
+  Top 2 {{ bikeTripsToDisplay[1] }} km<br>
+  Top 3 {{ bikeTripsToDisplay[2] }} km<br>
+
+  <h2>Skile</h2>
+  <ul>
+    @for (skills of skills; track $index) {
+      <li>{{ skills }}</li>
+      <button (click)="pass($index)">Zalicz</button>
+    }
+  </ul>
+</div>

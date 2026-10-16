@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>App with Forms</h1>
+  <p>Przetwarzanie formulaży w Angularze</p>
+
+  <h2>Edycja studenta {{nameSnapshot}}</h2>
+  Imię:<br>
+  <input type="text" [(ngModel)] ="name" (keydown.enter)="apply()"><br>
+  <br>
+  Wiek:<br>
+  <input type="number" [(ngModel)] ="age" (keydown.enter)="apply()"><br>
+  <br>
+  <input type="checkbox" [(ngModel)] ="isStudent">
+  jest studentem<br>
+  <br>
+  <button (click)="apply()">Zatwierdź</button>
+
+  <h4>Podsumowanie</h4>
+  <div [class.muted]="!isStudent">
+    Imię: {{nameSnapshot}} <br>
+    Wiek: {{ageSnapshot}} <br>
+  </div>
+
+  <h2>Konwerter Systemów Liczbowych</h2>
+  <input type="text" [(ngModel)]="myNumber">
+  <select [(ngModel)]="base" (change)="convertNumber()">
+    <option value="2">dwójkowa</option>
+    <option value="8">ósemkowa</option>
+    <option value="10">dziesiątkowa</option>
+    <option value="16">szestnastkowa</option>
+  </select>
+
+  <h2>Emoji selector</h2>
+  <div style="font-size: 200px">{{emoji}}</div>
+
+  <input type="radio" [(ngModel)]="emoji" value="🍌">Banan
+  <input type="radio" [(ngModel)]="emoji" value="🍎">Jabłko
+  <input type="radio" [(ngModel)]="emoji" value="🧀">Gouda
+</div>

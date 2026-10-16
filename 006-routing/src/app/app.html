@@ -1,0 +1,18 @@
+<div class="container">
+  <header>
+    <h1>
+      <img src="angular.png" alt="">
+      Routing demo  
+    </h1>
+    <p>Aplikacja Demonstrująca routing</p>
+  </header>
+  <nav>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActive]="">Home</a>
+    <a routerLink="/about" routerLinkActive="active">About us</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    <a routerLink="/special/1" routerLinkActive="active">Special 1</a>
+    <a routerLink="/special/2" routerLinkActive="active">Special 2</a>
+    <a routerLink="/special/3" routerLinkActive="active">Special 3 </a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

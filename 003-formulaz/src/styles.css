@@ -1,0 +1,22 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    width: 800px;
+    margin: auto;
+}
+
+h1 {
+    color: crimson;
+}
+
+h2{
+    color: teal;
+    border-bottom: 1px solid teal;
+}
+
+.muted {
+    color: gray;
+    font-style: italic;
+}

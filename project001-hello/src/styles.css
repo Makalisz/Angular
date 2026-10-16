@@ -1,0 +1,20 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    width: 800px;
+    margin: auto;
+}
+
+h1{
+    color: crimson;
+    border-bottom: 1px solid black;
+}
+
+.badge{
+    padding: 12px;
+    margin: 16px 0;
+    border-radius: 8px;
+    background-color: aquamarine;
+}
